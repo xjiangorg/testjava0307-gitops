@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: testjava0307 
+  janus-idp.io/tekton: testjava0307
+  backstage.io/kubernetes-id: testjava0307
+  backstage.io/kubernetes-namespace: testjava0307 
+  app.kubernetes.io/part-of: testjava0307
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
